@@ -1,0 +1,92 @@
+package csbe.Calculator;
+
+import java.util.Scanner;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        OperandAuswaehlen();
+    }
+    
+    public static void OperandAuswaehlen() {
+    	System.out.println("Wählen Sie eine Optionen aus: 1 = Addition 2 = Subtraktion, 3 = Multiplikation, 4 = Division, 5 = Binär");
+    	Scanner in = new Scanner(System.in);
+    	int input = in.nextInt();
+    	switch(input) {
+    		case 1:
+    			System.out.println("addieren");
+    			addieren();
+    			break;
+    		case 2:
+    			System.out.println("addieren");
+    			addieren();
+    			break;
+    		case 3:
+    			System.out.println("multiplizieren");
+    			multiplizieren();
+    			break;
+    		case 4:
+    			System.out.println("dividieren");
+    			dividieren();
+    			break;
+    		case 5:
+    			System.out.println("binär");
+    			binary();
+    			break;
+    		default: 
+    			System.out.println("Ungültige Eingabe");
+    			OperandAuswaehlen();
+    			break;
+    	}
+    }
+    
+    public static double ZahlEingabe() {
+    	System.out.println("Geben Sie eine Zahl ein");
+    	Scanner in = new Scanner(System.in);
+    	double zahl = in.nextDouble();
+    	return zahl;
+    }
+    
+    public static void addieren() {
+    	double zahl1 = ZahlEingabe();
+    	double zahl2 = ZahlEingabe();
+    	double resultat = zahl1 + zahl2;
+    	System.out.println("Resultat: " + resultat);
+    }
+    
+    public static void subtrahieren() {
+    	double zahl1 = ZahlEingabe();
+    	double zahl2 = ZahlEingabe();
+    	double resultat = zahl1 - zahl2;
+    	System.out.println("Resultat: " + resultat);
+    }
+    
+    public static void multiplizieren() {
+    	double zahl1 = ZahlEingabe();
+    	double zahl2 = ZahlEingabe();
+    	double resultat = zahl1 * zahl2;
+    	System.out.println("Resultat: " + resultat);
+    }
+    
+    public static void dividieren() {
+    	double zahl1 = ZahlEingabe();
+    	double zahl2 = ZahlEingabe();
+    	double resultat = zahl1 / zahl2;
+    	System.out.println("Resultat: " + resultat);
+    }
+    
+    public static void binary() {
+    	double zahl = ZahlEingabe();
+    	for(double i = 0; i < zahl.Length; i++) {
+    		
+    	}
+    	
+    }
+    
+    
+}

@@ -1,0 +1,42 @@
+package csbe.Calculator;
+
+import java.util.Scanner;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        OperandAuswaehlen();
+    }
+    
+    public static void OperandAuswaehlen() {
+    	System.out.println("Wählen Sie folgende Optionen aus: 1 = Addition 2 = Subtraktion");
+    	Scanner in = new Scanner(System.in);
+    	int input = in.nextInt();
+    	if(input == 1) {
+    		addieren();
+    	} else if (input == 2) {
+    		subtrahieren();
+    	} else {
+    		System.out.println("Ungültige Eingabe");
+    		OperandAuswaehlen();
+    	}
+    }
+    
+    public static double addieren() {
+    	
+    }
+    
+    public static double ZahlEingabe() {
+    	System.out.println("Geben Sie eine Zahl ein");
+    	Scanner in = new Scanner(System.in);
+    	double zahl = in.nextInt();
+
+    	return zahl;
+
+    }
+}
